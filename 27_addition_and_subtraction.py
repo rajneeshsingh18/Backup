@@ -2,6 +2,40 @@
 Ques. Write a program to implement the following binary operations
 a. addition
 b. subtraction using 2;s complement
+
+
+#binary addition
+bina1 = input("enter the first binary = ")
+bina2 = input("enter the second binary = ")
+
+intsum = int(bina1, 2) + int(bina2, 2)
+binasum = bin(intsum).replace("0b","")
+print("bit wise sum is =" ,binasum)
+
+
+#binary substraction
+bina1 = input("enter the first binary = ")
+bina2 = input("enter the second binary = ")
+
+int1=int(bina1 ,2)
+print("first number = ",int1)
+int2=int(bina2 ,2)
+print("second number = ",int2)
+
+if int2 > int1:
+  k=len(bina2)
+  comp2 = (2**k - 1)-int2+1
+  int2 = comp2
+  intsub = int1 + int2
+  k1=len(str(bin(intsub).replace("0b","")))
+  comp3 = (2**k1 - 1)-intsub+1
+  binsub = comp3
+  print(binsub)
+  print("bitwise subtraction is = -",bin(binsub).replace("0b",""))
+else:
+  intsum = int(bina1, 2) - int(bina2, 2)
+  binasum = bin(intsum).replace("b","")
+  print("bit wise subtraction is =" ,binasum)
 """
 
 def hex_to_dec(number):

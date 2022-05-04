@@ -1,3 +1,41 @@
+"""
+#octal addition
+bina1 = input("enter the first binary = ")
+bina2 = input("enter the second binary = ")
+
+intsum = int(bina1, 8) + int(bina2, 8)
+binasum = oct(intsum).replace("0o","")
+print("bit wise sum is =" ,binasum)
+
+
+#octal substraction
+bina1 = input("enter the first octal = ")
+bina2 = input("enter the second octal = ")
+
+int1=int(bina1 ,8)
+print("first number = ",int1)
+int2=int(bina2 ,8)
+print("second number = ",int2)
+
+if int2 > int1:
+  k=len(bina2)
+  comp2 = (8**k - 1)-int2+1
+  int2 = comp2
+  print(int2)
+  intsub = int1 + int2
+  k1=len(str(oct(intsub).replace("0o","")))
+  comp3 = (8**k1 - 1)-intsub+1
+  binsub = comp3
+  print("bitwise subtraction is = -",oct(binsub).replace("0o",""))
+else:
+  intsum = int(bina1, 8) - int(bina2, 8)
+  binasum = oct(intsum).replace("o","")
+  print("bit wise subtraction is =" ,binasum)
+
+
+"""
+
+
 def num_to_hex(digit):
     if digit > 9:
         return str(hex(digit)).replace('0x', '')

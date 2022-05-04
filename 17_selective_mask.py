@@ -1,4 +1,4 @@
-#selective mask
+#selective mask  AND operation
 
 num1=input("Enter a first binary number : " )
 num2=input("Enter a second binary number : " )

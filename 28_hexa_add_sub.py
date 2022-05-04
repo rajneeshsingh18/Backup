@@ -1,3 +1,38 @@
+"""
+#hexadecimal addition
+bina1 = input("enter the first binary = ")
+bina2 = input("enter the second binary = ")
+
+intsum = int(bina1, 16) + int(bina2, 16)
+binasum = hex(intsum).replace("0x1","")
+print("bit wise sum is =" ,binasum)
+
+#hexadecimal substraction
+bina1 = input("enter the first hexadecimal = ")
+bina2 = input("enter the second hexadecimal = ")
+
+int1=int(bina1 ,16)
+print("first number = ",int1)
+int2=int(bina2 ,16)
+print("second number = ",int2)
+
+if int2 > int1:
+  k=len(bina2)
+  comp2 = (16**k - 1)-int2+1
+  int2 = comp2
+  print(int2)
+  intsub = int1 + int2
+  k1=len(str(hex(intsub).replace("0b","")))
+  comp3 = (16**k1 - 1)-intsub+1
+  binsub = comp3
+  print("bitwise subtraction is = -",hex(binsub).replace("0b",""))
+else:
+  intsum = int(bina1, 16) - int(bina2, 16)
+  binasum = hex(intsum).replace("x","")
+  print("bit wise subtraction is =" ,binasum)
+"""
+
+
 def num_to_hex(digit):
     if digit > 9:
         return str(hex(digit)).replace('0x', '')
